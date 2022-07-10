@@ -1,0 +1,9 @@
+name: MT-Bounty
+version: '${project.version}'
+main: dev.crqptx.SkyMTBounties
+authors: [ Crqptx ]
+description: Bounties plugin voor SkyMT
+commands:
+  bounty:
+    description: Zet bounty.
+
