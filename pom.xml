@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.Crqptx</groupId>
-    <artifactId>SkyMT-Bounties</artifactId>
+    <artifactId>MT-Bounty</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>SkyMT-Bounties</name>
+    <name>MT-Bounty</name>
 
-    <description>Bounties plugin voor SkyMT</description>
+    <description>Bounty plugin</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

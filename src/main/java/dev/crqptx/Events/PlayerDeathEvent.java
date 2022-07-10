@@ -1,19 +1,17 @@
 package dev.crqptx.Events;
 
-import dev.crqptx.SkyMTBounties;
+import dev.crqptx.Main;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
 
-import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;
-import net.milkbowl.vault.permission.Permission;
 
 public class PlayerDeathEvent implements Listener {
-    SkyMTBounties cfg;
+    Main cfg;
 
-    public PlayerDeathEvent(SkyMTBounties instance) {cfg = instance; }
+    public PlayerDeathEvent(Main instance) {cfg = instance; }
 
    @EventHandler
     public void onPlayerDeathEvent(org.bukkit.event.entity.PlayerDeathEvent event) {

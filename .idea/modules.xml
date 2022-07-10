@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SkyMT-Bounties.iml" filepath="$PROJECT_DIR$/SkyMT-Bounties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MT-Bounty.iml" filepath="$PROJECT_DIR$/MT-Bounty.iml" />
     </modules>
   </component>
 </project>

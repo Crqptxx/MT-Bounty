@@ -1,4 +1,4 @@
 dev\crqptx\Commands\bounty.class
+dev\crqptx\Main.class
 dev\crqptx\Events\PlayerDeathEvent.class
-dev\crqptx\SkyMTBounties.class
 dev\crqptx\Events\InventoryClickListener.class

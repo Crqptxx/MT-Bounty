@@ -1,6 +1,6 @@
 name: MT-Bounty
 version: '${project.version}'
-main: dev.crqptx.SkyMTBounties
+main: dev.crqptx.Main
 authors: [ Crqptx ]
 description: Bounties plugin voor SkyMT
 commands:

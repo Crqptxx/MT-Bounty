@@ -1,5 +1,5 @@
 package dev.crqptx.Commands;
-import dev.crqptx.SkyMTBounties;
+import dev.crqptx.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -12,9 +12,9 @@ import java.util.Arrays;
 
 public class bounty implements CommandExecutor {
 
-    SkyMTBounties cfg;
+    Main cfg;
 
-    public bounty(SkyMTBounties instance) {cfg = instance; }
+    public bounty(Main instance) {cfg = instance; }
 
     public Inventory inv;
 

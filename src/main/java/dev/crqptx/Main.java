@@ -18,7 +18,7 @@ import net.milkbowl.vault.permission.Permission;
 
 import java.util.logging.Logger;
 
-public final class SkyMTBounties extends JavaPlugin {
+public final class Main extends JavaPlugin {
 
     private static final Logger log = Logger.getLogger("Minecraft");
     private static Economy econ = null;
