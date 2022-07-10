@@ -1,2 +1,9 @@
+# Plugin gemaakt door: Crqptx
+# Github: Crqptxx
+
 Menu-Name: "§f§lMT §c§lBOUNTY"
 bounties: {}
+
+
+permissions:
+  - bounty.remove
