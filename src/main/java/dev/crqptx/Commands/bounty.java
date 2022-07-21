@@ -1,5 +1,6 @@
 package dev.crqptx.Commands;
 import dev.crqptx.Main;
+import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -14,11 +15,11 @@ public class bounty implements CommandExecutor {
 
     Main cfg;
 
+
+
     public bounty(Main instance) {cfg = instance; }
 
     public Inventory inv;
-
-
 
     public void createInventory(Player player) {
         String Menu = cfg.getConfig().getString("Menu-Name");
@@ -36,8 +37,7 @@ public class bounty implements CommandExecutor {
             item.setItemMeta(meta);
             inv.addItem(item);
         }
-
-        Bukkit.getPlayer("").openInventory(inv);
+        player.openInventory(inv);
     }
 
 
@@ -48,6 +48,8 @@ public class bounty implements CommandExecutor {
 
         if (args.length == 0) {
             sender.sendMessage("§c------------------------------------------------------");
+            sender.sendMessage("§fMade by Crqptx");
+            sender.sendMessage(" ");
             sender.sendMessage("§c/bounty menu §7- §fOpent het Bounty Menu");
             sender.sendMessage("§c/bounty set §4<player> §4<bedrag> §7- §fZet een bounty op een speler.");
             sender.sendMessage("§c/bounty remove §4<player> §7- §fVerwijder een bounty van een speler.");
@@ -66,6 +68,18 @@ public class bounty implements CommandExecutor {
                 return true;
             }
 
+            // Get the balance from the sender, check if they have enought money, if they don't tell them, else withdraw arg 2 from their balance.
+            Economy econ = cfg.getServer().getServicesManager().getRegistration(Economy.class).getProvider();
+            String sender1 = sender.getName();
+            String amount = args[2];
+            if (econ.getBalance(sender1) < Integer.parseInt(amount)) {
+                sender.sendMessage("§cJe hebt niet genoeg geld om deze bounty te zetten.");
+                return true;
+            } else {
+                // Withdraw the balance of arg 2 from the player that executed command
+                econ.withdrawPlayer(sender1, Integer.parseInt(amount));
+            }
+
             if (sender.getName().equalsIgnoreCase(args[1])) {
                 sender.sendMessage("§cJe kan geen bounty op jezelf zetten!");
                 return true;
@@ -77,8 +91,12 @@ public class bounty implements CommandExecutor {
                 return true;
             }
 
+
+
+
             if (!Character.isUpperCase(args[1].charAt(0))) {
                 args[1] = args[1].substring(0, 1).toUpperCase() + args[1].substring(1);
+
             }
 
 
@@ -100,6 +118,8 @@ public class bounty implements CommandExecutor {
 
         if (args[0].equalsIgnoreCase("help")) {
             sender.sendMessage("§c------------------------------------------------------");
+            sender.sendMessage("§fMade by Crqptx");
+            sender.sendMessage(" ");
             sender.sendMessage("§c/bounty set §4<player> §4<bedrag> §7- §fZet een bounty op een speler.");
             sender.sendMessage("§c/bounty menu §7- §fOpent het Bounty Menu");
             sender.sendMessage("§c/bounty remove §4<player> §7- §fVerwijder een bounty van een speler.");

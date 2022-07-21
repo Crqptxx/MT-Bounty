@@ -1,0 +1,17 @@
+
+o
+java:S1104J"SMake economy a static final constant or non-public and provide accessors if needed.(ÊâÂ^8Æˆıä 0
+I
+java:S1444J"-Make this "public static economy" field final(ÊâÂ^8Çˆıä 0
+?
+java:S2629""$Invoke method(s) only conditionally.(ü´²Çøÿÿÿÿ
+1
+java:S36266"Remove this redundant jump.(ûÁİ…
+K
+java:S1874C"0Remove this use of "setOwner"; it is deprecated.(á¦®ºûÿÿÿÿ
+X
+java:S2696P"6Make the enclosing method "static" or remove this set.(­Áø¢ÿÿÿÿÿ8öˆıä 0
+=
+java:S1068"'Remove this unused "log" private field.(§•ğ
+M
+java:S1144L"1Remove this unused private "setupEconomy" method.(ù‚“@8úˆıä 0
